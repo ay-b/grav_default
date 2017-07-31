@@ -7,9 +7,9 @@ sudo apt install docker docker-compose wget git unzip -y
 chkconfig docker on
 service docker start
 
-cd /root
+cd ~
 git clone https://github.com/ay-b/grav_default.git
-cd /root/grav_default/html
+cd ~/grav_default/html
 wget https://getgrav.org/download/core/grav-admin/1.3.1 -O grav.zip
 unzip grav.zip
 mv grav-admin/* ./
