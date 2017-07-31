@@ -1,3 +1,4 @@
+version: '2'
 services: 
   nginx:
     image: nginx:alpine
@@ -19,7 +20,7 @@ services:
     restart: always
   fpm:
     build: 
-      context: ./
+      context: .
       dockerfile: Dockerfile.fpm
     volumes:
       - ./sock:/var/run
