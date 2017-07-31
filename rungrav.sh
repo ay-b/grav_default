@@ -25,7 +25,7 @@ unzip grav.zip
 mv grav-admin/* ./ && rm -rf ./grav-admin 
 cd ..
 docker-compose up -d --build
-(crontab -l 2>/dev/null; echo "@reboot docker-compose up -f /root/grav_default/Docker-compose.yml") | crontab -
+(crontab -l 2>/dev/null; echo "@reboot docker-compose up -f /var/www/Docker-compose.yml -d") | crontab -
 
 echo "
 ====================================================
