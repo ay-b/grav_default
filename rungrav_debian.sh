@@ -1,9 +1,8 @@
 #/bin/bash
 
-yum update -y
-yum upgrade -y
-yum install epel-release -y
-yum install docker docker-compose wget git unzip -y
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install docker docker-compose wget git unzip -y
 
 chkconfig docker on
 service docker start

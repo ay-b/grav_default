@@ -1,4 +1,3 @@
-version: '3.2'
 services: 
   nginx:
     image: nginx:alpine
@@ -18,14 +17,12 @@ services:
       - ./html:/usr/share/nginx/html
       - ./sock:/var/run
     restart: always
-
   fpm:
     build: 
       context: ./
       dockerfile: Dockerfile.fpm
     volumes:
       - ./sock:/var/run
-#      - ./html:/var/www/html
       - ./html:/usr/share/nginx/html
       - ./nginx/logs:/var/log/php-fpm
     restart: always
